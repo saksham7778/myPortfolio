@@ -3,10 +3,10 @@
 * [Software Required](#markdown-header-software-required)
 * [Setup Environment](#markdown-header-setup-environment)
     * [Cloning Repository](#markdown-header-cloning-repository)
-    * [Installing Node server](#markdown-installing-node-server)
-    * [Installing npm](#markdown-installing-npm-and-yarn)
-* [Starting react server](#markdown-starting-react-server)
-* [Troubleshooting](#markdown-troubleshooting)
+    * [Installing Node server](#markdown-header-installing-node-server)
+    * [Installing npm](#markdown-header-installing-npm-and-yarn)
+* [Starting react server](#markdown-header-starting-react-server)
+* [Troubleshooting](#markdown-header-troubleshooting)
 
 ## Software Required
 * npm
