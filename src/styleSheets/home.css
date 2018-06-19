@@ -1,0 +1,30 @@
+.up{
+    align-self: center    
+}
+.disappear{
+    opacity: 0
+}
+.down{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    transform: translate(-50px, -100px);
+}
+.down2{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    transform: translate(-50px, -100px);
+}
+.down3{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    transform: translate(-50px, -100px);
+}
+.left{
+    align-self: center    
+}
+.right1{
+    align-self: center    
+}
