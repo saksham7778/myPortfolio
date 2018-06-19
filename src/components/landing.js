@@ -79,8 +79,8 @@ class Landing extends Component {
         <div id="outro">
             <div className="content">
                 <img src="img/img_scrollmagic-logo.png" />
-                <h1>The End</h1>
-                <p>This is the end of our multi-direction ScrollMagic demo.</p>
+                <h1>Global odyssey</h1>
+                <p>Coming Soon...</p>
             </div>
             
         </div>
