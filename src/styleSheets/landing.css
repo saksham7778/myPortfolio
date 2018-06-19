@@ -86,12 +86,13 @@ body {
 #intro1{
     background-image: url("../assets/free-vector-modern-city_093317_bluecity.jpg");
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     background-color: #CCC;
     background-repeat: no-repeat;
     /* background-postion: 50% 50%; */
     background-size: cover;
     background-attachment: fixed;
+    overflow: hidden;
 }
 #intro .content,
 #outro .content,

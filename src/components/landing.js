@@ -19,7 +19,7 @@ class Landing extends Component {
         var horizontalMoveTl = new TimelineMax();
     
         horizontalMoveTl
-            .to('.horizontal-container', 1, {x: '-66.6666%', ease:Linear.easeNone});
+            .to('.horizontal-container', 0.1, {x: '-66.6666%', ease:Linear.easeNone});
     
         var pinMainScene = new ScrollMagic.Scene({
             triggerElement: '#main',
