@@ -84,7 +84,14 @@ body {
     position: relative;
 }
 #intro1{
-    background-image: url("../assets/free-vector-modern-city_093317_bluecity.jpg")
+    background-image: url("../assets/free-vector-modern-city_093317_bluecity.jpg");
+    width: 100%;
+    height: 100%;
+    background-color: #CCC;
+    background-repeat: no-repeat;
+    /* background-postion: 50% 50%; */
+    background-size: cover;
+    background-attachment: fixed;
 }
 #intro .content,
 #outro .content,
@@ -296,5 +303,5 @@ p {
     }
 }
 img#pic1{
-    opacity: 0  
+    opacity: 0
 }

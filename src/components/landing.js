@@ -16,7 +16,6 @@ class Landing extends Component {
     componentDidMount(){
         var controller = new ScrollMagic.Controller();
 
-    
         var horizontalMoveTl = new TimelineMax();
     
         horizontalMoveTl
