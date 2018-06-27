@@ -7,7 +7,7 @@ import down from '../assets/down.png'
 import left from '../assets/left.png'
 import right from '../assets/right.png'
 import '../styleSheets/landing.css'
-import {TimelineMax, Linear} from "gsap";
+import {TimelineMax, Linear, TweenMax, Power1} from "gsap";
 import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap'
 import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators'
 // import up from '../assets/up.png'
@@ -18,9 +18,22 @@ class Landing extends Component {
 
         var horizontalMoveTl = new TimelineMax();
     
+        
         horizontalMoveTl
-            .to('.horizontal-container', 0.1, {x: '-66.6666%', ease:Linear.easeNone});
-    
+        .to('.horizontal-container', 0.1, {x: '-66.6666%', ease:Linear.easeNone});
+        
+        var blurScene=TweenMax.to('#intro-main',0.1,{'filter':'blur(10px)',ease:Power1.easeNone})
+
+        
+        new ScrollMagic.Scene({
+            triggerElement: '#main',
+            triggerHook: 1,
+            duration: '100%'
+        })
+        .setTween(blurScene)
+        .addIndicators('blurrrrrrrrrrrrrrrrr')
+        .addTo(controller);
+
         var pinMainScene = new ScrollMagic.Scene({
             triggerElement: '#main',
             triggerHook: 0,
@@ -38,6 +51,9 @@ class Landing extends Component {
 
     render() {
         return <div id="intro1">
+        <div id="intro-main">
+
+        </div>
         <div id="intro">
             <div className="content">
                 <img src="img/img_scrollmagic-logo.png" />
