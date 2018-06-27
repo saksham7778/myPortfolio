@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
+import logo from '../assets/logo.png';
 import '../App.css';
 import * as ScrollMagic from 'scrollmagic';
 import up from '../assets/up.png'
 import land from '../assets/land.png'
-import left from '../assets/left.png'
+import anim from '../assets/anim.svg'
 import right from '../assets/right.png'
 import '../styleSheets/landing.css'
 import {TimelineMax, Linear, TweenMax, Power1, Power3, Power4, Power0, Power2} from "gsap";
@@ -56,7 +56,7 @@ class Landing extends Component {
         </div>
         <div id="intro">
             <div className="content">
-                <img src="img/img_scrollmagic-logo.png" />
+                <img id='logo' src={logo} />
                 <h1>Saturnalia</h1>
                 <p>North india's biggest Techno-culture fest</p>
             </div>
@@ -96,8 +96,10 @@ class Landing extends Component {
         </div>
 
         <div id="outro">
+                <img id='anim'src={anim} />
+        </div>
+        <div id="outro">
             <div className="content">
-                <img src="img/img_scrollmagic-logo.png" />
                 <h1>Global odyssey</h1>
                 <p>Coming Soon...</p>
             </div>
