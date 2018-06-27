@@ -151,7 +151,7 @@ p {
     bottom: 0;
 }
 .section-1,
-.section-3 {background-color: #4C4D4F; color: #fff}
+.section-3 {background-color: transparent; color: #fff}
 
 /* ==========================================================================
    Media Queries

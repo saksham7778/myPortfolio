@@ -31,7 +31,7 @@ class Landing extends Component {
             duration: '100%'
         })
         .setTween(blurScene)
-        .addIndicators('blurrrrrrrrrrrrrrrrr')
+        // .addIndicators('blurrrrrrrrrrrrrrrrr')
         .addTo(controller);
 
         var pinMainScene = new ScrollMagic.Scene({
@@ -40,7 +40,7 @@ class Landing extends Component {
             duration: '300%'
         })
         .setTween(horizontalMoveTl)
-        .addIndicators()
+        // .addIndicators()
         .setPin('#main')
         .addTo(controller);
         var imageMover= new ScrollMagic.Scene({
