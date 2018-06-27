@@ -96,14 +96,14 @@ class Landing extends Component {
         </div>
 
         <div id="outro">
-                <img id='anim'src={anim} />
-        </div>
-        <div id="outro">
             <div className="content">
                 <h1>Global odyssey</h1>
                 <p>Coming Soon...</p>
             </div>
             
+        </div>
+        <div id="outro">
+                <img id='anim'src={anim} />
         </div>
                
         </div>
