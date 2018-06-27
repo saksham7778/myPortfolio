@@ -22,7 +22,7 @@ class Landing extends Component {
         horizontalMoveTl
         .to('.horizontal-container', 1, {x: '-66.6666%', ease:Power2.easeInOut,delay:0.1,lazy:true});
         
-        var blurScene=TweenMax.to('#intro-main',0.1,{'filter':'blur('+Math.round(10*100)/100+')',ease:Power1.easeNone})
+        var blurScene=TweenMax.to('#intro-main',0.1,{'filter':'blur('+Math.round(50*100)/100+')',ease:Power1.easeNone})
 
         
         new ScrollMagic.Scene({
