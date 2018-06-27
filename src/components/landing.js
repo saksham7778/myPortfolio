@@ -12,12 +12,8 @@ import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap'
 import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators'
 // import up from '../assets/up.png'
 class Landing extends Component {
-    constructor(props){
-        super(props)
-        this.state={isLoading:true}
-    }
+
     componentDidMount(){
-        this.setState({isLoading:false})
         var controller = new ScrollMagic.Controller();
 
         var horizontalMoveTl = new TimelineMax();
@@ -54,7 +50,7 @@ class Landing extends Component {
     }
 
     render() {
-        return this.state.isLoading?<div style={{backgroundColor:'green'}}><h1>loading</h1></div>:<div id="intro1">
+        return <div id="intro1">
         <div id="intro-main">
 
         </div>
