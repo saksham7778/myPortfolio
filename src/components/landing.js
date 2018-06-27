@@ -18,16 +18,16 @@ class Landing extends Component {
 
         var horizontalMoveTl = new TimelineMax();
     
-        
+        Math.round(10*100)/100
         horizontalMoveTl
-        .to('.horizontal-container', 0.001, {x: '-66.6666%', ease:Power2.easeInOut});
+        .to('.horizontal-container', 1, {x: '-66.6666%', ease:Power2.easeInOut,delay:0.1,lazy:true});
         
-        var blurScene=TweenMax.to('#intro-main',0.1,{'filter':'blur(10px)',ease:Power1.easeNone})
+        var blurScene=TweenMax.to('#intro-main',0.1,{'filter':'blur('+Math.round(10*100)/100+')',ease:Power1.easeNone})
 
         
         new ScrollMagic.Scene({
             triggerElement: '#main',
-            triggerHook: 1,
+            triggerHook: 0.9,
             duration: '100%'
         })
         .setTween(blurScene)
