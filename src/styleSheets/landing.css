@@ -107,6 +107,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 h2 {
     margin-top: 0;
@@ -152,6 +153,13 @@ p {
 }
 .section-1,
 .section-3 {background-color: transparent; color: #fff}
+img#landpng{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    transform: translate(0, 50%);
+
+}
 
 /* ==========================================================================
    Media Queries

@@ -3,7 +3,7 @@ import logo from '../logo.svg';
 import '../App.css';
 import * as ScrollMagic from 'scrollmagic';
 import up from '../assets/up.png'
-import down from '../assets/down.png'
+import land from '../assets/land.png'
 import left from '../assets/left.png'
 import right from '../assets/right.png'
 import '../styleSheets/landing.css'
@@ -72,6 +72,7 @@ class Landing extends Component {
                         <h2>Past things</h2>
                         <p>Jubin</p>
                     </div>
+                        <img id='landpng' src={land}/>
                 </div>
 
                 <div className="section-2 section-horizontal">
@@ -79,12 +80,14 @@ class Landing extends Component {
                         <h2>Present things</h2>
                         <p>Lets go</p>
                     </div>
+                        <img id='landpng' src={land}/>
                 </div>
                 <div className="section-3 section-horizontal">
                     <div className="content">
                         <h2>Lets move</h2>
                         <p>connect to us</p>
                     </div>
+                        <img id='landpng' src={land}/>
                 </div>
                 
 
@@ -100,7 +103,7 @@ class Landing extends Component {
             </div>
             
         </div>
-       
+               
         </div>
     }
 }
