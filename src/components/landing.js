@@ -142,7 +142,7 @@ class Landing extends Component {
             
         </div>
         <div id="outro" className='one'>
-                <img id='anim'src={anim} />
+                {/* <img id='anim'src={anim} /> */}
         </div>
                
         </div>
