@@ -84,11 +84,20 @@ body {
     text-align: center;
     /* color: #fff; */
     position: fixed;
-    background-image: url("../assets/free-vector-modern-city_093317_bluecity.jpg");
     overflow: hidden;
-    background-size: cover;
     background-position: center;
     filter:blur(0px);
+    
+}
+.initialBackground{
+    opacity: 1;
+    background-size: cover;
+    background-image: url("../assets/free-vector-modern-city_093317_bluecity.jpg");
+}
+.changeBackground{
+    opacity: 1;
+    background-size: 100% 100%;    
+    background-image: url("../assets/anim.svg");
 }
 #intro1{
     width: 100%;
@@ -158,10 +167,12 @@ img#landpng{
     bottom:0;
     width:100%;
     opacity: 1;
-    transform: translate(0, 50%);
+    transform: translate(0, 62%);
     filter: blur(20px)
 
 }
+
+
 
 /* ==========================================================================
    Media Queries

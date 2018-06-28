@@ -20,20 +20,29 @@ class Landing extends Component {
     
         Math.round(10*100)/100
         horizontalMoveTl
-        .to('.horizontal-container', 1, {x: '-66.6666%', ease:Power2.easeInOut,delay:0.1,lazy:true});
+        .to('.horizontal-container', 1, {x: '-66.6666%', ease:Power4.ease,delay:0.1,lazy:true});
         
-        var blurScene=TweenMax.to('#intro-main',0.1,{'filter':'blur('+Math.round(50*100)/100+')',ease:Power1.easeNone})
+        var blurScene=TweenMax.to('#intro-main',0.1,{'filter':'blur('+Math.round(100*100)/100+')',ease:Power4.easeInOut})
         
-        var antiBlurScene=TweenMax.to('img#landpng',0.1,{'filter':'blur('+0+')',ease:Power1.easeNone})
+        var antiBlurScene=TweenMax.to('img#landpng',0.1,{'filter':'blur('+0+')',ease:Power4.easeInOut})
 
-        var removeTween=TweenMax.to('img#landpng',0.1,{'opacity':0,ease:Power1.easeNone})
+
+        new ScrollMagic.Scene({
+            triggerElement:'#outro.one',
+            triggerHook:1,
+            duration:'201%'
+        }).setClassToggle('#intro-main','changeBackground').addTo(controller);
+
+        var removeOpacityTween=TweenMax.to('img#landpng',0.1,{'opacity':0,ease:Power1.easeNone})
+
+        var removeBlueTween=TweenMax.to('#intro-main',0.1,{'filter':'blur('+Math.round(0*100)/100+')',ease:Power1.easeNone})
         
         new ScrollMagic.Scene({
             triggerElement: '#outro',
             triggerHook: 1,
             duration: '100%'
         })
-        .setTween(removeTween)
+        .setTween(removeOpacityTween)
         // .addIndicators('blurrrrrrrrrrrrrrrrr')
         .addTo(controller);
 
@@ -45,6 +54,16 @@ class Landing extends Component {
         .setTween(antiBlurScene)
         // .addIndicators('blurrrrrrrrrrrrrrrrr')
         .addTo(controller);
+        
+        new ScrollMagic.Scene({
+            triggerElement: '#outro.one',
+            triggerHook: 1,
+            duration: '100%'
+        })
+        .setTween(removeBlueTween)
+        // .addIndicators('blurrrrrrrrrrrrrrrrr')
+        .addTo(controller);
+        
         new ScrollMagic.Scene({
             triggerElement: '#main',
             triggerHook: 0.9,
@@ -71,7 +90,7 @@ class Landing extends Component {
 
     render() {
         return <div id="intro1">
-        <div id="intro-main">
+        <div id="intro-main" className='initialBackground'>
 
         </div>
         <div id="intro">
@@ -122,7 +141,7 @@ class Landing extends Component {
             </div>
             
         </div>
-        <div id="outro">
+        <div id="outro" className='one'>
                 <img id='anim'src={anim} />
         </div>
                
