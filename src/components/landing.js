@@ -22,7 +22,7 @@ class Landing extends Component {
         horizontalMoveTl
         .to('.horizontal-container', 1, {x: '-66.6666%', ease:Power4.ease,delay:0.1,lazy:true});
         
-        var blurScene=TweenMax.to('#intro-main',0.1,{'filter':'blur('+Math.round(100*100)/100+')',ease:Power4.easeInOut})
+        var blurScene=TweenMax.to('#intro-main',0.1,{'filter':'blur('+Math.round(20*100)/100+')',ease:Power4.easeInOut})
         
         var antiBlurScene=TweenMax.to('img#landpng',0.1,{'filter':'blur('+0+')',ease:Power4.easeInOut})
 
