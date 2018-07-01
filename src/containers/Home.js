@@ -8,7 +8,7 @@ import left from '../assets/left.png'
 import right from '../assets/right.png'
 import '../styleSheets/home.css'
 import {TweenMax, Power2,Power1, TimelineLite, TimelineMax} from "gsap/TweenMax";
-class home extends Component {
+export default class Home extends Component {
 
     componentDidMount(){
         var controller= new ScrollMagic.Controller();
@@ -115,5 +115,3 @@ class home extends Component {
         );
     }
 }
-
-export default home;

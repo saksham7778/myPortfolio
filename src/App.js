@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Switch, Route, BrowserRouter } from 'react-router-dom'
-import home from './components/home';
-import Landing from './components/landing';
+import {Home,Landing} from './containers';
 
 class App extends Component {
   render() {
@@ -11,7 +10,7 @@ class App extends Component {
       <BrowserRouter>
       <Switch>
       <Route exact path='/' component={Landing}/>
-      <Route exact path='/home' component={home}/>
+      <Route exact path='/home' component={Home}/>
       </Switch>
     </BrowserRouter>
     );
