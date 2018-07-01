@@ -123,8 +123,6 @@ class Landing extends Component {
 
     render() {
         return <div id="intro1">
-        <div id="intro-main" className='initialBackground'>
-        </div>
         {!this.assetsAreLoaded()?
         <div style={{backgroundColor:'blue',height:'100vh',zIndex:10}}>
             <div className="loader">
@@ -138,6 +136,8 @@ class Landing extends Component {
         </div>
         :
         <div/>}
+        <div id="intro-main" className='initialBackground'>
+        </div>
         <div id="intro">
             <div className="content">
                 <img id='logo'
