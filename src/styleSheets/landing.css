@@ -102,7 +102,6 @@ body {
     align-self: center;
     overflow: hidden;
     opacity: 1;
-    background-size: cover;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -110,11 +109,16 @@ body {
     /* background-image: url("../assets/free-vector-modern-city_093317_bluecity.jpg"); */
 }
 .main-background2{
-    width: 100%;
+    width: 90%;
     height: 100vh;
     position: fixed;
+    align-self: center;
+    overflow: hidden;
     opacity: 0;
-    background-size: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(0px);
     /* background-image: url("../assets/free-vector-modern-city_093317_bluecity.jpg"); */
 }
 .changeBackground{
