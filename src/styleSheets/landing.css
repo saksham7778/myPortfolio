@@ -96,10 +96,11 @@ body {
     
 }
 .main-background1{
-    width: inherit;
+
     height: 100vh;
     position: fixed;
-    align-items: center;
+    align-self: center;
+    overflow: hidden;
     opacity: 1;
     background-size: cover;
     top: 50%;

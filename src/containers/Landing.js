@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import '../App.css';
 import '../styleSheets/landing.css'
 import * as ScrollMagic from 'scrollmagic';
-import { up, endAnimation, land, right, logoPNG, logoSVG,cityBackground } from '../assets'
+import { up, endAnimation, land, right, logoPNG, logoSVG, cityBackground } from '../assets'
 import { TimelineMax, Linear, TweenMax, Power1, Power3, Power4, Power0, Power2 } from "gsap";
 import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap'
 import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators'
 import Lottie from 'react-lottie';
-import { HorizontalSection, LoadingScreen,Welcome} from "../components";
+import { HorizontalSection, LoadingScreen, Welcome } from "../components";
 import * as loadingAnim from '../assets/loadingAnim.json'
 const defaultOptions = {
     loop: true,
@@ -72,15 +72,15 @@ export default class Landing extends Component {
             triggerHook: 1,
             duration: '201%'
         }).setTween(removeBGOpacityTween)
-        // .addIndicators()
-        .addTo(controller);
+            // .addIndicators()
+            .addTo(controller);
         new ScrollMagic.Scene({
             triggerElement: '#outro.one',
             triggerHook: 1,
             duration: '201%'
         }).setTween(addBGOpacityTween)
-        // .addIndicators()
-        .addTo(controller);
+            // .addIndicators()
+            .addTo(controller);
 
         // new ScrollMagic.Scene({
         //     triggerElement: '#outro.one',
@@ -88,7 +88,7 @@ export default class Landing extends Component {
         //     duration: '201%'
         // }).setClassToggle('#intro-main', 'changeBackground').addTo(controller);
 
-        
+
 
         new ScrollMagic.Scene({
             triggerElement: '#outro',
@@ -136,13 +136,14 @@ export default class Landing extends Component {
     render() {
         return <div id="intro1">
             {!this.assetsAreLoaded() ? <LoadingScreen /> : <div />}
-            <div id="intro-main" className='initialBackground' />
-                <img className='main-background1' src={cityBackground} onLoad={()=>this.handleAssetLoad5()}/>
-                <img className='main-background2' src={endAnimation} onLoad={()=>this.handleAssetLoad6()}/>
+            <div id="intro-main" className='initialBackground'>
+                <img className='main-background1' src={cityBackground} onLoad={() => this.handleAssetLoad5()} />
+                <img className='main-background2' src={endAnimation} onLoad={() => this.handleAssetLoad6()} />
+            </div>
             <Welcome
                 title='Saturnalia'
                 tagline="North India's biggest Techno-culture fest"
-                handleOnLoadImage={()=>this.handleAssetLoad1()}
+                handleOnLoadImage={() => this.handleAssetLoad1()}
                 logo={logoPNG}
             />
 
