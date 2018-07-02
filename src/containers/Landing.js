@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import '../styleSheets/landing.css'
 import * as ScrollMagic from 'scrollmagic';
-import { up, endAnimation, land, right, logoPNG, logoSVG } from '../assets'
+import { up, endAnimation, land, right, logoPNG, logoSVG,cityBackground } from '../assets'
 import { TimelineMax, Linear, TweenMax, Power1, Power3, Power4, Power0, Power2 } from "gsap";
 import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap'
 import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators'
@@ -26,6 +26,8 @@ export default class Landing extends Component {
             image2Loaded: false,
             image3Loaded: false,
             image4Loaded: false,
+            image5Loaded: false,
+            image6Loaded: false,
         }
     }
     assetsAreLoaded() {
@@ -33,7 +35,9 @@ export default class Landing extends Component {
             this.state.image1Loaded &&
             this.state.image2Loaded &&
             this.state.image3Loaded &&
-            this.state.image4Loaded
+            this.state.image4Loaded &&
+            this.state.image5Loaded &&
+            this.state.image6Loaded
         ) {
             return true;
         }
@@ -43,6 +47,8 @@ export default class Landing extends Component {
     handleAssetLoad2() { this.setState({ image2Loaded: true }) }
     handleAssetLoad3() { this.setState({ image3Loaded: true }) }
     handleAssetLoad4() { this.setState({ image4Loaded: true }) }
+    handleAssetLoad5() { this.setState({ image5Loaded: true }) }
+    handleAssetLoad6() { this.setState({ image6Loaded: true }) }
     componentDidMount() {
         var controller = new ScrollMagic.Controller();
 
@@ -52,20 +58,37 @@ export default class Landing extends Component {
         horizontalMoveTl
             .to('.horizontal-container', 1, { x: '-66.6666%', ease: Power4.ease, delay: 0.1, lazy: true });
 
-        var blurScene = TweenMax.to('#intro-main', 0.1, { 'filter': 'blur(' + Math.round(20 * 100) / 100 + ')', ease: Power4.easeInOut })
+        var blurScene = TweenMax.to('img.main-background1', 0.1, { 'filter': 'blur(' + Math.round(20 * 100) / 100 + ')', ease: Power4.easeInOut })
 
         var antiBlurScene = TweenMax.to('img#landpng', 0.1, { 'filter': 'blur(' + 0 + ')', ease: Power4.easeInOut })
 
+        var addBGOpacityTween = TweenMax.to('img.main-background2', 0.1, { 'opacity': 1, ease: Power1.easeNone })
+        var removeBGOpacityTween = TweenMax.to('img.main-background1', 0.1, { 'opacity': 0, ease: Power1.easeNone })
+        var removeOpacityTween = TweenMax.to('img#landpng', 0.1, { 'opacity': 0, ease: Power1.easeNone })
+        var removeBlurTween = TweenMax.to('#intro-main', 0.1, { 'filter': 'blur(' + Math.round(0 * 100) / 100 + ')', ease: Power1.easeNone })
 
         new ScrollMagic.Scene({
             triggerElement: '#outro.one',
             triggerHook: 1,
             duration: '201%'
-        }).setClassToggle('#intro-main', 'changeBackground').addTo(controller);
+        }).setTween(removeBGOpacityTween)
+        // .addIndicators()
+        .addTo(controller);
+        new ScrollMagic.Scene({
+            triggerElement: '#outro.one',
+            triggerHook: 1,
+            duration: '201%'
+        }).setTween(addBGOpacityTween)
+        // .addIndicators()
+        .addTo(controller);
 
-        var removeOpacityTween = TweenMax.to('img#landpng', 0.1, { 'opacity': 0, ease: Power1.easeNone })
+        // new ScrollMagic.Scene({
+        //     triggerElement: '#outro.one',
+        //     triggerHook: 1,
+        //     duration: '201%'
+        // }).setClassToggle('#intro-main', 'changeBackground').addTo(controller);
 
-        var removeBlueTween = TweenMax.to('#intro-main', 0.1, { 'filter': 'blur(' + Math.round(0 * 100) / 100 + ')', ease: Power1.easeNone })
+        
 
         new ScrollMagic.Scene({
             triggerElement: '#outro',
@@ -85,14 +108,6 @@ export default class Landing extends Component {
             // .addIndicators('blurrrrrrrrrrrrrrrrr')
             .addTo(controller);
 
-        new ScrollMagic.Scene({
-            triggerElement: '#outro.one',
-            triggerHook: 1,
-            duration: '100%'
-        })
-            .setTween(removeBlueTween)
-            // .addIndicators('blurrrrrrrrrrrrrrrrr')
-            .addTo(controller);
 
         new ScrollMagic.Scene({
             triggerElement: '#main',
@@ -122,17 +137,8 @@ export default class Landing extends Component {
         return <div id="intro1">
             {!this.assetsAreLoaded() ? <LoadingScreen /> : <div />}
             <div id="intro-main" className='initialBackground' />
-            {/* <div id="intro">
-                <div className="content">
-                    <img id='logo'
-                        onLoad={
-                            () => this.handleAssetLoad1()
-                        }
-                        src={logoSVG} />
-                    <h1>Saturnalia</h1>
-                    <p>North india's biggest Techno-culture fest</p>
-                </div>
-            </div> */}
+                <img className='main-background1' src={cityBackground} onLoad={()=>this.handleAssetLoad5()}/>
+                <img className='main-background2' src={endAnimation} onLoad={()=>this.handleAssetLoad6()}/>
             <Welcome
                 title='Saturnalia'
                 tagline="North India's biggest Techno-culture fest"
@@ -171,14 +177,14 @@ export default class Landing extends Component {
 
             </div>
 
-            <div id="outro">
+            <div id="outro" className='one'>
                 <div className="content">
                     <h1>Global odyssey</h1>
                     <p>Coming Soon...</p>
                 </div>
 
             </div>
-            <div id="outro" className='one'>
+            <div id="outro" className='two'>
                 {/* <img id='anim'src={anim} /> */}
             </div>
 

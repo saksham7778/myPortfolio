@@ -95,10 +95,26 @@ body {
     filter:blur(0px);
     
 }
-.initialBackground{
+.main-background1{
+    width: inherit;
+    height: 100vh;
+    position: fixed;
+    align-items: center;
     opacity: 1;
     background-size: cover;
-    background-image: url("../assets/free-vector-modern-city_093317_bluecity.jpg");
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(0px);
+    /* background-image: url("../assets/free-vector-modern-city_093317_bluecity.jpg"); */
+}
+.main-background2{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    opacity: 0;
+    background-size: cover;
+    /* background-image: url("../assets/free-vector-modern-city_093317_bluecity.jpg"); */
 }
 .changeBackground{
     opacity: 1;
