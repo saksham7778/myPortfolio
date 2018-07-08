@@ -35,7 +35,7 @@ export default class Landing extends Component {
         }
         return false;
     }
-    handleAssetLoad1() { this.setState({ image1Loaded: true }) }
+    handleAssetLoad1() { this.setState({ image1Loaded: false }) }
     handleAssetLoad2() { this.setState({ image2Loaded: true }) }
     handleAssetLoad3() { this.setState({ image3Loaded: true }) }
     handleAssetLoad4() { this.setState({ image4Loaded: true }) }
