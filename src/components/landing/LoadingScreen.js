@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import '../../styleSheets/loading.css'
 import Lottie from 'react-lottie';
-import { loaderJSON,confetti } from '../../assets'
+import { loadingHamster } from '../../assets'
 
 const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: confetti,
+    animationData: loadingHamster,
     rendererSettings: {
         preserveAspectRatio: 'xMidYMid slice'    
     },
@@ -20,8 +20,6 @@ export default class LoadingScreen extends Component {
                     <div className="loader">
 
                         <Lottie options={defaultOptions}
-                        height={1000}
-                        width={1000}
                         />
                         {/* <svg viewBox="0 0 571 517">
                             <g className="plane">

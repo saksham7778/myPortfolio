@@ -10,4 +10,5 @@ var logoSVG=            require('./SVG_SAT18.svg')
 var right=              require('./right.png')
 var up=                 require('./up.png')
 var confetti=           require('./confetti.json')
-export{endAnimation,down,cityBackground,land,left,loader,loaderJSON,logoPNG,logoSVG,right,up,confetti}
+var loadingHamster=    require('./loading_hamster.json')
+export{endAnimation,down,cityBackground,land,left,loader,loaderJSON,logoPNG,logoSVG,right,up,confetti,loadingHamster}
