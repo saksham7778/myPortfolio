@@ -6,17 +6,9 @@ import { up, endAnimation, land, right, logoPNG, logoSVG, cityBackground } from 
 import { TimelineMax, Linear, TweenMax, Power1, Power3, Power4, Power0, Power2 } from "gsap";
 import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap'
 import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators'
-import Lottie from 'react-lottie';
 import { HorizontalSection, LoadingScreen, Welcome } from "../components";
 import * as loadingAnim from '../assets/loadingAnim.json'
-const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: loadingAnim,
-    rendererSettings: {
-        preserveAspectRatio: 'xMidYMid slice'
-    }
-}
+
 export default class Landing extends Component {
 
     constructor(props) {
@@ -135,7 +127,8 @@ export default class Landing extends Component {
 
     render() {
         return <div id="intro1">
-            {!this.assetsAreLoaded() ? <LoadingScreen /> : <div />}
+            {!this.assetsAreLoaded() ?
+                 <LoadingScreen /> : <div />}
             <div id="intro-main" className='initialBackground'>
                 <img className='main-background1' src={cityBackground} onLoad={() => this.handleAssetLoad5()} />
                 <img className='main-background2' src={endAnimation} onLoad={() => this.handleAssetLoad6()} />
