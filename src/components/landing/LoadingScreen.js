@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import '../../styleSheets/loading.css'
 import Lottie from 'react-lottie';
-import { loaderJSON } from '../../assets'
+import { loaderJSON,confetti } from '../../assets'
 
 const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: loaderJSON,
+    animationData: confetti,
     rendererSettings: {
         preserveAspectRatio: 'xMidYMid slice'    
     },
