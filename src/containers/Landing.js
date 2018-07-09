@@ -128,7 +128,7 @@ export default class Landing extends Component {
     render() {
         return <div id="intro1">
             {!this.assetsAreLoaded() ?
-                 <LoadingScreen /> : <div />}
+                <LoadingScreen /> : <div />}
             <div id="intro-main" className='initialBackground'>
                 <img className='main-background1' src={cityBackground} onLoad={() => this.handleAssetLoad5()} />
                 <img className='main-background2' src={endAnimation} onLoad={() => this.handleAssetLoad6()} />
