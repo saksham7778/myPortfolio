@@ -108,7 +108,7 @@ export default class Landing extends Component {
             duration: '100%'
         })
             .setTween(blurScene)
-            .addIndicators('blurrrrrrrrrrrrrrrrr')
+            // .addIndicators('blurrrrrrrrrrrrrrrrr')
             .addTo(controller);
 
         var pinMainScene = new ScrollMagic.Scene({
@@ -230,4 +230,3 @@ export default class Landing extends Component {
         </div>
     }
 }
-
