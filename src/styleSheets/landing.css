@@ -236,11 +236,13 @@ img#landpng{
     width: 15vmax;
     position:  initial;
     opacity: 1;
-    flex-wrap: nowrap
+    
 }
 .progressBarContainerWrapper{
     display: flex;
     flex-direction: row;
+    align-content: center;
+    overflow: hidden
 }
 
 

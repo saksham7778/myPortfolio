@@ -179,16 +179,16 @@ export default class Landing extends Component {
                         <div style={{marginTop:'8vmax'}}>
                         
                         <div className='progressBarContainerWrapper'>
-                            <ProgressBar skillName='ReactJS(Web)' progress='70'/>                            
+                            <ProgressBar skillName='ReactJS (Web)' progress='70'/>                            
                             <ProgressBar skillName='HTML' progress='80'/>
                             <ProgressBar skillName='NodeJS (ExpressJS)' progress='50'/>                            
-                            <ProgressBar skillName='Android(Core)' progress='40'/>                            
+                            <ProgressBar skillName='Android (Core)' progress='40'/>                            
                             <ProgressBar skillName='Blender3D' progress='50'/>                    
                         </div>
                         <div className='progressBarContainerWrapper'>
-                            <ProgressBar skillName='ReactJS(Native)' progress='75'/>                            
+                            <ProgressBar skillName='ReactJS (Native)' progress='75'/>                            
                             <ProgressBar skillName='CSS' progress='70'/>
-                            <ProgressBar skillName='Java-Core' progress='60'/>                            
+                            <ProgressBar skillName='Java' progress='60'/>                            
                             <ProgressBar skillName='GIT/GitHub' progress='90'/>
                             <ProgressBar skillName='G-Compute Engine' progress='70'/>                            
                         </div>
@@ -208,6 +208,13 @@ export default class Landing extends Component {
                                 <ProgressBar skillName='Illustrator' progress='50'/>                            
                                 <ProgressBar skillName='Python' progress='40'/>                            
                                 <ProgressBar skillName='Machine Learning' progress='20'/>                    
+                            </div>
+                            <div className='progressBarContainerWrapper'>
+                                <ProgressBar skillName='SQL' progress='70'/>                            
+                                <ProgressBar skillName='Scroll Magic' progress='40'/>                            
+                                <ProgressBar skillName='C++' progress='60'/>                            
+                                <ProgressBar skillName='Premier' progress='50'/>                            
+                                <ProgressBar skillName='☕' progress='100'/>                            
                             </div>
                         </div>
                     </div>
