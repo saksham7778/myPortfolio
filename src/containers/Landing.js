@@ -51,7 +51,7 @@ export default class Landing extends Component {
         horizontalMoveTl
             .to('.horizontal-container', 1, { x: '-66.6666%', ease: Power4.ease, delay: 0.1, lazy: true });
 
-        var blurScene = TweenMax.to('img.main-background1', 0.1, { 'filter': 'blur(' + Math.round(20 * 100) / 100 + ')', ease: Power4.easeInOut })
+        var blurScene = TweenMax.to('img.main-background1', 0.1, { 'filter': 'blur(' + Math.round(20 * 100) / 100 + ')', ease: Linear.easeInOut })
 
         var antiBlurScene = TweenMax.to('img#landpng', 0.1, { 'filter': 'blur(' + 0 + ')', ease: Power4.easeInOut })
 
@@ -104,11 +104,11 @@ export default class Landing extends Component {
 
         new ScrollMagic.Scene({
             triggerElement: '#main',
-            triggerHook: 0.9,
+            triggerHook: 1,
             duration: '100%'
         })
             .setTween(blurScene)
-            // .addIndicators('blurrrrrrrrrrrrrrrrr')
+            .addIndicators('blurrrrrrrrrrrrrrrrr')
             .addTo(controller);
 
         var pinMainScene = new ScrollMagic.Scene({
@@ -151,15 +151,20 @@ export default class Landing extends Component {
                     <div className='sectionContainer'>
                         <p className='introPara'>I am a self taught developer.
                              Hailing from the Golden city Amritsar, 
-                             it has been a great ride. </p>
-                             <p className='introPara'>I stand 6'3"</p>
-                        <p className='introPara'>I Love to play Basketball, Shoot Threes and some verticle shy of dunks 🙈 </p>
+                             it has been a great ride. <br>
+                             </br>I stand 6'3"<br>
+                             </br>I Love to play Basketball, Shoot Threes and some verticle shy of dunks 🙈 </p>
                         <p className='introPara'>I love to play these Musical Instruments(priority wise)</p>
                         <ul>
                             <li className='introPara'>Guitar(<a href='https://youtu.be/tdN9-F_d8GM' target='_blank'>This one is covered by my</a>)</li>
                             <li className='introPara'>Tabla</li>
                             <li className='introPara'>Harmonium</li>
                         </ul>
+                        <p className='introPara'>Metric CGPA 9.6<br>
+                        </br>Senior Secondary Score 82% - Non medical Sciences<br>
+                        </br>Persuing <strong>BE(CSE)+MBA</strong> From Thapar University, Patiala<br>
+                        </br>Current CGPA:- 7</p>
+                        
 
 
                     </div>
@@ -168,12 +173,15 @@ export default class Landing extends Component {
 
                 <div className="section-2 section-horizontal">
                     <div className='sectionContainer'>
-                        <div>
+                    <p style={{textAlign:'center'}}>
+                        Soft Skills
+                    </p>
+                        <div style={{marginTop:'8vmax'}}>
                         
                         <div className='progressBarContainerWrapper'>
                             <ProgressBar skillName='ReactJS(Web)' progress='70'/>                            
                             <ProgressBar skillName='HTML' progress='80'/>
-                            <ProgressBar skillName='NodeJS(ExpressJS)' progress='50'/>                            
+                            <ProgressBar skillName='NodeJS (ExpressJS)' progress='50'/>                            
                             <ProgressBar skillName='Android(Core)' progress='40'/>                            
                             <ProgressBar skillName='Blender3D' progress='50'/>                    
                         </div>
@@ -190,7 +198,10 @@ export default class Landing extends Component {
                 </div>
                 <div className="section-3 section-horizontal">
                     <div className='sectionContainer'>
-                        <div>
+                    <p style={{textAlign:'center'}}>
+                        Soft Skills
+                    </p>
+                        <div style={{marginTop:'8vmax'}}>
                             <div className='progressBarContainerWrapper'>
                                 <ProgressBar skillName='Photoshop' progress='80'/>                            
                                 <ProgressBar skillName='After Effects' progress='60'/>

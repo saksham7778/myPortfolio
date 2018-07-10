@@ -156,7 +156,7 @@ p#title{
 }
 p {
     font-size: 18px;
-    color: darkblue
+    color: rgb(177, 177, 177)
 }
 
 
@@ -228,7 +228,7 @@ img#landpng{
     text-align: justify;
     transform: skew(-5deg);
     font-family: 'Dancing Script',cursive;
-    font-size: 2vmax
+    font-size: 1.8vmax
 }
 .progressBarContainer{
     height: 10%;
