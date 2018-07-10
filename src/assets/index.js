@@ -8,7 +8,8 @@ var loaderJSON=         require('./loadingAnim.json')
 var logoPNG=            require('./logo.png')
 var logoSVG=            require('./SVG_SAT18.svg')
 var right=              require('./right.png')
+var background=              require('./background.png')
 var up=                 require('./up.png')
 var confetti=           require('./confetti.json')
 var loadingHamster=    require('./loading_hamster.json')
-export{endAnimation,down,cityBackground,land,left,loader,loaderJSON,logoPNG,logoSVG,right,up,confetti,loadingHamster}
+export{endAnimation,down,cityBackground,land,left,loader,loaderJSON,logoPNG,background,logoSVG,right,up,confetti,loadingHamster}

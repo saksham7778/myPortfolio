@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import '../App.css';
 import '../styleSheets/landing.css'
 import * as ScrollMagic from 'scrollmagic';
-import { up, endAnimation, land, right, logoPNG, logoSVG, cityBackground } from '../assets'
+import { ProgressBar } from "../components";
+import { up, endAnimation, land, right, logoPNG, logoSVG, background } from '../assets'
 import { TimelineMax, Linear, TweenMax, Power1, Power3, Power4, Power0, Power2 } from "gsap";
 import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap'
 import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators'
@@ -14,10 +15,10 @@ export default class Landing extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            image1Loaded: false,
-            image2Loaded: false,
-            image3Loaded: false,
-            image4Loaded: false,
+            image1Loaded: true,
+            image2Loaded: true,
+            image3Loaded: true,
+            image4Loaded: true,
             image5Loaded: false,
             image6Loaded: false,
         }
@@ -130,56 +131,89 @@ export default class Landing extends Component {
             {!this.assetsAreLoaded() ?
                 <LoadingScreen /> : <div />}
             <div id="intro-main" className='initialBackground'>
-                <img className='main-background1' src={cityBackground} onLoad={() => this.handleAssetLoad5()} />
-                <img className='main-background2' src={endAnimation} onLoad={() => this.handleAssetLoad6()} />
+                <img className='main-background1' src={background} onLoad={() => this.handleAssetLoad5()} />
+                <img className='main-background2' src={background} onLoad={() => this.handleAssetLoad6()} />
             </div>
-            <Welcome
-                title='Saturnalia'
-                tagline="North India's biggest Techno-culture fest"
-                handleOnLoadImage={() => this.handleAssetLoad1()}
-                logo={logoPNG}
-            />
+            <div id="intro">
+                <p id='title'>manjot.in</p>
+            <div className="content">
+                {/* <img src="img/img_scrollmagic-logo.png"/> */}
+                <p>{'</FullStackDeveloper>'}</p>
+            </div>
+            <img id='pic1' src={up}></img>
+            </div>
 
             <div id="main" className="main-container">
+            
+            <div className="horizontal-container">
 
-                <div className="horizontal-container">
-
-                    <HorizontalSection
-                        containerClass='section-1 section-horizontal'
-                        heading='Past things'
-                        paragraph='Jubin'
-                        handleOnLoad={() => this.handleAssetLoad2()}
-                        bottomImage={land}
-                    />
-                    <HorizontalSection
-                        containerClass='section-2 section-horizontal'
-                        heading='Present things'
-                        paragraph='Lets go'
-                        handleOnLoad={() => this.handleAssetLoad3()}
-                        bottomImage={land}
-                    />
-                    <HorizontalSection
-                        containerClass='section-3 section-horizontal'
-                        heading='Lets move'
-                        paragraph='connect to us'
-                        handleOnLoad={() => this.handleAssetLoad4()}
-                        bottomImage={land}
-                    />
+                <div className="section-1 section-horizontal">
+                    <div className='sectionContainer'>
+                        <p className='introPara'>I am a self taught developer.
+                             Hailing from the Golden city Amritsar, 
+                             it has been a great ride. </p>
+                             <p className='introPara'>I stand 6'3"</p>
+                        <p className='introPara'>I Love to play Basketball, Shoot Threes and some verticle shy of dunks 🙈 </p>
+                        <p className='introPara'>I love to play these Musical Instruments(priority wise)</p>
+                        <ul>
+                            <li className='introPara'>Guitar(<a href='https://youtu.be/tdN9-F_d8GM' target='_blank'>This one is covered by my</a>)</li>
+                            <li className='introPara'>Tabla</li>
+                            <li className='introPara'>Harmonium</li>
+                        </ul>
 
 
+                    </div>
+                        {/* <img id='landpng' src={land}/> */}
                 </div>
 
+                <div className="section-2 section-horizontal">
+                    <div className='sectionContainer'>
+                        <div>
+                        
+                        <div className='progressBarContainerWrapper'>
+                            <ProgressBar skillName='ReactJS(Web)' progress='70'/>                            
+                            <ProgressBar skillName='HTML' progress='80'/>
+                            <ProgressBar skillName='NodeJS(ExpressJS)' progress='50'/>                            
+                            <ProgressBar skillName='Android(Core)' progress='40'/>                            
+                            <ProgressBar skillName='Blender3D' progress='50'/>                    
+                        </div>
+                        <div className='progressBarContainerWrapper'>
+                            <ProgressBar skillName='ReactJS(Native)' progress='75'/>                            
+                            <ProgressBar skillName='CSS' progress='70'/>
+                            <ProgressBar skillName='Java-Core' progress='60'/>                            
+                            <ProgressBar skillName='GIT/GitHub' progress='90'/>
+                            <ProgressBar skillName='G-Compute Engine' progress='70'/>                            
+                        </div>
+                        </div>
+                    </div>
+                    {/* <img id='landpng' src={land}/> */}
+                </div>
+                <div className="section-3 section-horizontal">
+                    <div className='sectionContainer'>
+                        <div>
+                            <div className='progressBarContainerWrapper'>
+                                <ProgressBar skillName='Photoshop' progress='80'/>                            
+                                <ProgressBar skillName='After Effects' progress='60'/>
+                                <ProgressBar skillName='Illustrator' progress='50'/>                            
+                                <ProgressBar skillName='Python' progress='40'/>                            
+                                <ProgressBar skillName='Machine Learning' progress='20'/>                    
+                            </div>
+                        </div>
+                    </div>
+                    {/* <img id='landpng' src={land}/> */}
+                </div>
+                
+
             </div>
+
+        </div>
 
             <div id="outro" className='one'>
                 <div className="content">
-                    <h1>Global odyssey</h1>
-                    <p>Coming Soon...</p>
-                </div>
 
-            </div>
-            <div id="outro" className='two'>
-                {/* <img id='anim'src={anim} /> */}
+                    <h3><a href='https://github.com/manjotsk' target='_blank'>GitHub</a></h3>
+                    <h3><a href='https://instagram.com/manjotsinghkalsi' target='_blank'>Instagram</a></h3>
+                </div>
             </div>
 
         </div>
