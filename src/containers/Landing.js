@@ -135,10 +135,10 @@ export default class Landing extends Component {
                 <img className='main-background2' src={background} onLoad={() => this.handleAssetLoad6()} />
             </div>
             <div id="intro">
-                <p id='title'>manjot.in</p>
             <div className="content">
+            <p id='title'><code>manjot.in</code></p>
                 {/* <img src="img/img_scrollmagic-logo.png"/> */}
-                <p>{'</FullStackDeveloper>'}</p>
+                <p><code>{'</FullStackDeveloper>'}</code></p>
             </div>
             <img id='pic1' src={up}></img>
             </div>
@@ -221,9 +221,11 @@ export default class Landing extends Component {
 
             <div id="outro" className='one'>
                 <div className="content">
-
-                    <h3><a href='https://github.com/manjotsk' target='_blank'>GitHub</a></h3>
-                    <h3><a href='https://instagram.com/manjotsinghkalsi' target='_blank'>Instagram</a></h3>
+                    <p style={{fontFamily:'Knewave',fontSize:'5vmax'}}><a href='https://github.com/manjotsk' target='_blank'>GitHub</a></p>
+                    <p style={{fontFamily:'Knewave',fontSize:'5vmax'}}><a href='https://instagram.com/manjotsinghkalsi' target='_blank'>Instagram</a></p>
+                    <p style={{fontFamily:'Knewave',fontSize:'3vmax'}}>
+                        <a href="mailto:manjot.kalsi@simbaquartz.com?Subject=Hi%20Manjot%20" target="_top">Email Me</a>
+                    </p>
                 </div>
             </div>
 

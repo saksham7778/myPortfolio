@@ -98,6 +98,7 @@ body {
 .main-background1{
     overflow-x: hidden;
     width: 100vmax;
+    height: 100vmax;
     position: fixed;
     align-self: center;
     margin-right: 0;
@@ -110,8 +111,8 @@ body {
     /* background-image: url("../assets/free-vector-modern-city_093317_bluecity.jpg"); */
 }
 .main-background2{
-    width: 90%;
     width: 100vmax;
+    height: 100vmax;
     position: fixed;
     align-self: center;
     overflow: hidden;

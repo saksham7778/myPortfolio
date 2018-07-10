@@ -7,11 +7,11 @@ export default class ProgressBar extends Component {
     return (
         <div className='progressBarContainer' style={{borderColor:'black'}}>
             <div>
-                <h3 style={{height:'3vmax',fontSize:'3.5vmin',color:'black',marginBottom:'10px'}}>
+                <h3 style={{height:'3vmax',fontSize:'3.5vmin',color:'black',marginBottom:'20px'}}>
                     {this.props.skillName}
                 </h3>
             </div>
-            <div style={{width:'7.5vmax'}}>
+            <div style={{width:'6vmax',marginBottom:'20px',marginLeft:'3vmax'}}>
                 <Circle trailColor='grey' percent={this.props.progress} strokeWidth="10" strokeColor="#D3D3D3"  />
             </div>
 
