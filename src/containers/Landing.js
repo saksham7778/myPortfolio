@@ -190,7 +190,7 @@ export default class Landing extends Component {
                             <ProgressBar skillName='CSS' progress='70'/>
                             <ProgressBar skillName='Java' progress='60'/>                            
                             <ProgressBar skillName='GIT/GitHub' progress='90'/>
-                            <ProgressBar skillName='G-Compute Engine' progress='70'/>                            
+                            <ProgressBar skillName='Compute Engine' progress='70'/>                            
                         </div>
                         </div>
                     </div>
