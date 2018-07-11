@@ -60,6 +60,16 @@ export default class Landing extends Component {
         var removeOpacityTween = TweenMax.to('img#landpng', 0.1, { 'opacity': 0, ease: Power1.easeNone })
         var removeBlurTween = TweenMax.to('#intro-main', 0.1, { 'filter': 'blur(' + Math.round(0 * 100) / 100 + ')', ease: Power1.easeNone })
 
+        // var changeProgressState1=TweenMax.call(this.changeState)
+
+        // new ScrollMagic.Scene({
+        //     triggerElement: '#main',
+        //     triggerHook:.5,
+        //     duration: '50%'
+        // }).setTween(changeProgressState1)
+        //     // .addIndicators()
+        //     .addTo(controller);
+            
         new ScrollMagic.Scene({
             triggerElement: '#outro.one',
             triggerHook: 1,
@@ -123,8 +133,8 @@ export default class Landing extends Component {
         // var imageMover= new ScrollMagic.Scene({
         //     triggerElement:'#pic1'
         // })
-
     }
+    
 
     render() {
         return <div id="intro1">
@@ -138,7 +148,7 @@ export default class Landing extends Component {
             <div className="content">
             <p id='title'><code>manjot.in</code></p>
                 {/* <img src="img/img_scrollmagic-logo.png"/> */}
-                <p><code>{'</FullStackDeveloper>'}</code></p>
+                <p><code>{'<FullStackDeveloper/>'}</code></p>
             </div>
             <img id='pic1' src={up}></img>
             </div>
@@ -173,19 +183,21 @@ export default class Landing extends Component {
 
                 <div className="section-2 section-horizontal">
                     <div className='sectionContainer'>
-                    <p style={{textAlign:'center'}}>
-                        Soft Skills
+                    <p style={{textAlign:'center',fontSize:'2vmax'}}>
+                        <code>
+                            Soft Skills
+                        </code>
                     </p>
                         <div style={{marginTop:'8vmax'}}>
                         
                         <div className='progressBarContainerWrapper'>
                             <ProgressBar skillName='ReactJS (Web)' progress='80'/>                            
-                            <ProgressBar skillName='HTML' progress='80'/>
-                            <ProgressBar skillName='NodeJS (ExpressJS)' progress='50'/>                            
-                            <ProgressBar skillName='Android (Core)' progress='40'/>                            
+                            <ProgressBar skillName='</HTML>' progress='80'/>
+                            <ProgressBar skillName='NodeJS (ExpressJS)' progress='60'/>                            
+                            <ProgressBar skillName='Android (Core)' progress='50'/>                            
                             <ProgressBar skillName='Blender3D' progress='50'/>                    
                         </div>
-                        <div className='progressBarContainerWrapper'>
+                        <div className='progressBarContainerWrapper2'>
                             <ProgressBar skillName='ReactJS (Native)' progress='85'/>                            
                             <ProgressBar skillName='CSS' progress='75'/>
                             <ProgressBar skillName='Java' progress='60'/>                            
@@ -209,7 +221,7 @@ export default class Landing extends Component {
                                 <ProgressBar skillName='Python' progress='40'/>                            
                                 <ProgressBar skillName='Machine Learning' progress='20'/>                    
                             </div>
-                            <div className='progressBarContainerWrapper'>
+                            <div className='progressBarContainerWrapper2'>
                                 <ProgressBar skillName='SQL' progress='70'/>                            
                                 <ProgressBar skillName='Scroll Magic' progress='40'/>                            
                                 <ProgressBar skillName='C++' progress='60'/>                            
