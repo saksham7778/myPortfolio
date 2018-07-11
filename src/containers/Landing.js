@@ -240,10 +240,9 @@ export default class Landing extends Component {
 
             <div id="outro" className='one'>
                 <div className="content">
-                    <p style={{fontFamily:'Knewave',fontSize:'5vmax',color:'white'}}><a href='https://github.com/manjotsk' target='_blank'>GitHub</a></p>
-                    <p style={{fontFamily:'Knewave',fontSize:'5vmax',color:'white'}}><a href='https://instagram.com/manjotsinghkalsi' target='_blank'>Instagram</a></p>
-                    <p style={{fontFamily:'Knewave',fontSize:'3vmax',color:'white'}}>
-                        <a href="mailto:manjot.kalsi@simbaquartz.com?Subject=Hi%20Manjot%20" target="_top">Email Me</a>
+                    <p style={{fontFamily:'Knewave',fontSize:'5vmax'}}><a className='outroP' href='https://github.com/manjotsk' target='_blank'>GitHub</a></p>
+                    <p style={{fontFamily:'Knewave',fontSize:'5vmax'}}><a className='outroP' href='https://instagram.com/manjotsinghkalsi' target='_blank'>Instagram</a></p>
+                    <p style={{fontFamily:'Knewave',fontSize:'3vmax'}}><a className='outroP' href="mailto:manjot.kalsi@simbaquartz.com?Subject=Hi%20Manjot%20" target="_top">Email Me</a>
                     </p>
                 </div>
             </div>
