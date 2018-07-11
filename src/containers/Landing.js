@@ -179,18 +179,18 @@ export default class Landing extends Component {
                         <div style={{marginTop:'8vmax'}}>
                         
                         <div className='progressBarContainerWrapper'>
-                            <ProgressBar skillName='ReactJS (Web)' progress='70'/>                            
+                            <ProgressBar skillName='ReactJS (Web)' progress='80'/>                            
                             <ProgressBar skillName='HTML' progress='80'/>
                             <ProgressBar skillName='NodeJS (ExpressJS)' progress='50'/>                            
                             <ProgressBar skillName='Android (Core)' progress='40'/>                            
                             <ProgressBar skillName='Blender3D' progress='50'/>                    
                         </div>
                         <div className='progressBarContainerWrapper'>
-                            <ProgressBar skillName='ReactJS (Native)' progress='75'/>                            
-                            <ProgressBar skillName='CSS' progress='70'/>
+                            <ProgressBar skillName='ReactJS (Native)' progress='85'/>                            
+                            <ProgressBar skillName='CSS' progress='75'/>
                             <ProgressBar skillName='Java' progress='60'/>                            
                             <ProgressBar skillName='GIT/GitHub' progress='90'/>
-                            <ProgressBar skillName='Compute Engine' progress='70'/>                            
+                            <ProgressBar skillName='Compute Engine' progress='90'/>                            
                         </div>
                         </div>
                     </div>
